@@ -5,3 +5,4 @@ __pycache__
 secret.json
 telegram_test.py
 /secrets.json
+/lightsail_settings.txt
