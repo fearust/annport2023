@@ -1,18 +1,21 @@
 from .base import *
+import environ
 
 DEBUG = False
 
 ALLOWED_HOSTS = ['3.35.114.141']
 
+env = environ.Env()
+environ.Env.read_env(BASE_DIR / '.env')
 # Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': '5432',
     }
 }
 
