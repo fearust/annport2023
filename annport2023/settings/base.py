@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # wedding 시크릿 키 설정
 
-with open(BASE_DIR / "secret.json") as f:
+with open(BASE_DIR / "secrets.json") as f:
     secrets = json.loads(f.read())
 
 def get_secret(setting, secrets=secrets):
