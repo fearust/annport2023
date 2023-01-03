@@ -1,0 +1,20 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-nav > li {
+  font-weight: 800;
+}
+.bx-minus {
+  color: #afb5bf;
+}
+.btn:focus,
+.btn:active,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}

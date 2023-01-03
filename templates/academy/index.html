@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_academy.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Academy
+{% endblock %}
+
+{% block navbar %}
+    {% include "academy/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="border: 2px solid #eeeeee; border-top-width: 0;">
+
+        <div class="ann_home_slide">
+            <div class="ann_home_slide_page" style="background-image: url('{% static 'images/academy/home04.jpg' %}')"
+                 ;>
+                <div class="ann_home_slide_content"
+                     style="backdrop-filter: blur(4px); background-color: rgba(0, 0, 0, 50%);">
+                    <span class="ann_home_slide_title">
+                        소수정예 클래스<br>
+                        아나포트 아카데미
+                    </span>
+                    <span class="d-none d-lg-block ann_home_slide_text" style="color: white;">
+                        많은 학생들이 대형학원 수료 이후 우리 학원을 찾는 이유는 간단합니다.<br>
+                        험난한 여정의 길잡이가 되어줄 따뜻한 멘토가 필요하기 때문입니다.<br>
+                        아나포트 아카데미에는 '고객'이 없습니다. '멘토'와 '멘티'만 존재합니다.<br>
+                        진심 어린 멘토링과 고민 상담, 각 채용 대비 점검은 언제든 열려 있습니다.<br>
+                    </span>
+                    <span class="d-block d-lg-none ann_home_slide_text" style="color: white;">
+                        많은 학생들이 대형학원 수료 이후<br> 우리 학원을 찾는 이유는 간단합니다.<br>
+                        험난한 여정의 길잡이가 되어줄<br> 따뜻한 멘토가 필요하기 때문입니다.<br>
+                        아나포트 아카데미에는 '고객'이 없습니다.<br> '멘토'와 '멘티'만 존재합니다.<br>
+                        진심 어린 멘토링과 고민 상담,<br> 각 채용 대비 점검은 언제든 열려 있습니다.<br>
+                    </span>
+                </div>
+            </div>
+            <div class="ann_home_slide_page" style="background-image: url('{% static 'images/academy/home01.jpg' %}')"
+                 ;>
+                <div class="ann_home_slide_content" style="backdrop-filter: blur(4px); background-color: rgba(0, 0, 0, 50%);">
+              <span class="ann_home_slide_title">
+                  현직 아나운서 강사진의<br>
+                  차별화된 교육
+              </span>
+                    <span class="d-none d-lg-block ann_home_slide_text" style="color: white;">
+                        현직 아나운서 강사진의 꼼꼼한 코칭으로 합격에 다가갑니다.<br>
+                        젊고 트렌디한 현직 선생님들의 실전적인 수업에는<br>
+                        오직 학생들을 향한 진심과 열정이 가득 담겨 있습니다.
+                    </span>
+                    <span class="d-block d-lg-none ann_home_slide_text" style="color: white;">
+                        현직 아나운서 강사진의<br> 꼼꼼한 코칭으로 합격에 다가갑니다.<br>
+                        젊고 트렌디한 현직 선생님들의 실전적인 수업에는<br>
+                        오직 학생들을 향한 진심과 열정이 가득 담겨 있습니다.
+                    </span>
+                </div>
+            </div>
+            <div class="ann_home_slide_page" style="background-image: url('{% static 'images/academy/home03.jpg' %}')"
+                 ;>
+                <div class="ann_home_slide_content"
+                     style="backdrop-filter: blur(4px); background-color: rgba(0, 0, 0, 50%);">
+                <span class="ann_home_slide_title">
+                    투명하고 합리적인 <br>수강료는 오직 <br>아나포트 아카데미에서
+                </span>
+                    <span class="d-none d-lg-block ann_home_slide_text" style="color: white;">
+                        이토록 투명하게 수강료를 공개할 수 있는 이유,<br>
+                        바로 거품을 뺀 합리적인 가격을 책정하고 있기 때문입니다.<br>
+                        더 많은 수강생이 하루 빨리 꿈과 목표에 다가갈 수 있도록<br>
+                        프로필/포트폴리오 무료 촬영, 제휴숍 헤어/메이크업 등<br>
+                        우리 학원 학생들에게 아낌없는 지원을 제공하고 있습니다.
+                    </span>
+                    <span class="d-block d-lg-none ann_home_slide_text" style="color: white;">
+                        이토록 투명하게 수강료를 공개할 수 있는 이유,<br>
+                        바로 거품을 뺀 합리적인 가격을<br>책정하고 있기 때문입니다.<br>
+                        더 많은 수강생이 하루 빨리 <br>꿈과 목표에 다가갈 수 있도록<br>
+                        프로필/포트폴리오 무료 촬영, <br>제휴숍 헤어/메이크업 등<br>
+                        우리 학원 학생들에게 <br>아낌없는 지원을 제공하고 있습니다.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mx-0">
+            <div class="ann_home_banner col-12 col-lg-6"
+                 style="background-image: url('{% static 'images/academy/home_banner01.jpg' %}'); cursor: pointer;"
+                 onClick="location.href='#'">
+                <div class="ann_home_banner_content" style="background-color: #E3705C66;">
+                    <span style="background-color: #26A191; padding: 5px 10px; font-size: 0.8em;">진정성 있는 상담 / 본인의 실력 점검</span><br>
+                    <span style="font-size: 1.5em; font-weight: 700;">아나포트 아카데미 상담</span>
+                </div>
+            </div>
+            <div class="ann_home_banner col-12 col-lg-6"
+                 style="background-image: url('{% static 'images/academy/home_banner02.jpg' %}'); cursor: pointer"
+                onClick="window.open('https://blog.naver.com/jglovelove')">
+                <div class="ann_home_banner_content" style="background-color: #65758566;">
+                    <span style="background-color: #657585; padding: 5px 10px; font-size: 0.8em;">이벤트 및 각종 정보</span><br>
+                    <span style="font-size: 1.5em; font-weight: 700;">아나포트 아카데미 블로그</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ann_home_slide').slick({
+            dots: true,
+            infinite: true,
+            speed: 1000,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: false,
+        });
+    });
+</script>
+{% endblock %}

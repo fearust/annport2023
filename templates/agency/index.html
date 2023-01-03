@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_agency.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Agency
+{% endblock %}
+
+{% block navbar %}
+    {% include "agency/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="ann_home_slide">
+            <div class="ann_home_slide_page" style="background-image: url('{% static 'images/agency/agency_home_background01.jpg' %}')">
+                <div class="ann_home_slide_content"
+                     style="backdrop-filter: blur(4px); background-color: #eeeeee80;">
+                    <div class="slidebleed">
+
+                        <img src="{% static 'images/agency/home_announcer.png' %}">
+                    </div>
+                    <div class="slidetext">
+                        <p class="ann_home_slide_title">
+                            <span style="font-weight: 900;">아나포트 에이전시</span>는<br>
+                            준비되어 있습니다<br>
+{#                            <svg viewBox="0 0 600 100">#}
+{#                                <text class="svgText" x="0" y="70" style="font-weight: 900">#}
+{#                                    아나포트는 준비합니다.#}
+{#                                </text>#}
+{#                            </svg>#}
+                        </p>
+                        <span class="ann_home_slide_text">
+                            귀사의 발전을 위해
+                        </span><br>
+                        <span class="ann_home_slide_text">
+                            아나포트 에이전시는 항상 준비되어 있습니다.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ann_home_slide').slick({
+            dots: false,
+            infinite: true,
+            speed: 1000,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: false,
+        });
+    });
+</script>
+{% endblock %}

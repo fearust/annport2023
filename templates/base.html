@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/boxicons.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/slick/slick-theme.css' %}"/>
+    {% block head %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+<!-- 상단 메뉴 시작 -->
+{% block navbar %}{% endblock %}
+<div id="top_spacer"></div>
+<!-- 상단 메뉴 끝 -->
+
+<!-- 콘텐츠 -->
+<div id="content" class="clearfix">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer 시작 -->
+<div id="footer" class="clearfix">
+    <div class="container">
+        <div class="p-3" style="color: #afb5bf">
+            <img class="my-3" src="{% static 'images/annport_logo_simple.svg' %}" width="120px"/>
+            <br/>
+            <p class="ps-4">
+                아나포트 <br/>
+                박종근 <br/>
+                서울 강서구 공항대로 45길 44 청림빌딩 414호 <br/>
+                사업자등록번호: 109-16-43122 (박종근)
+                <br/>
+                전화번호: 02-3663-0947 / 010-9091-0947 <br/>
+                팩스: 02-6442-9091
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Footer 끝 -->
+
+<script src="{% static 'cssjs/jquery-3.6.3.min.js' %}"></script>
+<script src="{% static 'cssjs/slick/slick.min.js' %}"></script>
+<script src="{% static 'cssjs/boxicons.js' %}"></script>
+<script src="{% static 'cssjs/bootstrap.js' %}"></script>
+
+{% block script %}{% endblock %}
+
+</body>
+</html>

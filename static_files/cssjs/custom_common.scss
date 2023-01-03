@@ -1,0 +1,12 @@
+// bootstrap breakpoint(>=) sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px
+@import "custom_module/_custom_base";
+
+
+
+// navbar
+@media (min-width: 992px) {
+  .navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

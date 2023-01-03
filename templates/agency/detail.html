@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load templatetags %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_agency.css' %}"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Agency
+{% endblock %}
+
+{% block navbar %}
+    {% include "agency/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div id="detail_upper_wrap"
+             style="background-image: url('{{ mc.profile_backdrop.image.url }}')">
+            <div id="detail_upper1">
+                <img src="{{ mc.profile_photo.url }}" alt="" />
+            </div>
+            <div id="detail_upper1-2">
+                <p id="detail_name">
+                    <span class="uppername">{{ mc.name }}</span><br>
+                    <span class="uppertitle">{{ mc.title }}</span>
+                </p>
+                <span class="d-block text-truncate uppertag">
+                    {% for mctag in mc.tags.all %}#{{ mctag }} {% endfor %}
+                </span>
+            </div>
+            <div id="detail_upper1-3"></div>
+            <img id="detail_upper_logo" src="{% static '/images/annport_logo_simple(212529).svg' %}" />
+            <a href="#">
+            <div id="detail_upper_download">
+                <box-icon type='solid' name='download'></box-icon> DOWNLOAD PDF
+            </div>
+            </a>
+        </div>
+
+        <div class="row gy-3" id="detail_mid_wrap">
+            <div class="col-12 col-lg-4">
+                <div id="detail_mid1">
+                    {{ mc.description }}
+                    <br><br>
+                    {{ mc.profile|mark }}
+                    <div class="d-flex justify-content-center">
+                        <div class="row gx-2 mt-1 pt-3 row-cols-3 justify-content-center border-top border-dark" style="width: 100%;">
+                            {% for tag in tag_list %}
+                                <div class="col-auto">
+                                    <div class="px-3 py-1 my-1 text-light rounded-pill" style="background-color: #606480">
+                                        <span>#{{ tag }}</span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <div id="detail_mid2">
+                    <div class="col-12">
+                        <div id="movies_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                            <!-- 이미지들 -->
+                            <div class="carousel-inner">
+                                {% if mc.youtube_set.count > 0 %}
+                                    {% for youtube in mc.youtube_set.all %}
+                                        <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
+                                            <div class="youtube-embed d-block w-100 ratio ratio-16x9">
+                                                <iframe
+                                                        src="https://www.youtube-nocookie.com/embed/{{ youtube.url }}?rel=0"
+                                                        frameborder="0"
+                                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <!-- 썸네일 -->
+                            <div class="carousel_thumbnails d-flex flex-wrap justify-content-start mt-2 gap-1">
+                                {% if mc.youtube_set.count > 0 %}
+                                    {% for youtube in mc.youtube_set.all %}
+                                        <div class="carousel_thumbnail00">
+                                            <img
+                                                    src="https://img.youtube.com/vi/{{ youtube.url }}/mqdefault.jpg"
+                                                    type="button"
+                                                    data-bs-target="#movies_carousel"
+                                                    data-bs-slide-to="{{ forloop.counter0 }}"
+                                                    aria-label="Slide {{ forloop.counter }}"
+                                                    aria-current="true"
+                                                    class="active rounded"
+                                            />
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

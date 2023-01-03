@@ -1,0 +1,249 @@
+@import "custom_common";
+
+// ----------------------------------------------------
+// theme color
+// ----------------------------------------------------
+
+$maincolor: #95c9c5;
+$maincolor-80: #95c9c580;
+$maincolor-sub:#95c9c5;
+$maincolor-sub80:#95c9c580;
+$subcolor: #f6895b;
+$subcolor-80: #f6895b80;
+$subcolor2: #26A191;
+$bg-default: white;
+
+// ----------------------------------------------------
+// nav-bar and button
+// ----------------------------------------------------
+
+.ann_nav{@include bgcolor($maincolor)}
+#footer{@include bgcolor(#231f20)}
+#content{
+  @include bgcolor($bg-default);
+}
+.ann_dropdown-menu {
+  background-color: $maincolor;
+  border-radius: 0 !important;
+}
+.ann_dropdown-item {
+  &:hover {background-color: $maincolor-sub80;}
+  &:active {background-color: $maincolor-sub80;}
+  &:focus {background-color: $maincolor-sub80;}
+}
+ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
+  display:block;
+  top: 100%;
+  left: 0;
+  margin-top: -.125rem !important;
+  &[data-bs-popper]{margin-top: -.125rem !important;}
+}
+.ann_button{
+  /* border: 2px solid black; */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 40px;
+  font-weight: 700;
+  transition: 0.3s;
+  .ab_pink{
+    background-color: $maincolor;
+    &:hover{background-color: $maincolor-sub;}
+  }
+  .ab_green{
+    background-color: $subcolor;
+    &:hover{background-color: $subcolor-80;}
+  }
+}
+
+// ----------------------------------------------------
+// home
+// ----------------------------------------------------
+
+#fullcover {
+  display: flex; justify-content: center; align-items: center;
+  padding: 0; margin: 0;
+  .carousel {width: 100%; height: 100%;}
+  .carousel-item {width: 100%; height: 100%; overflow: hidden;}
+}
+.home_content {
+  @include backcover;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  @media (min-width: 992px) {padding: 60px;}
+  @media (max-width: 991px) {padding: 20px;}
+}
+.home_title {font-size: 10vmin; font-weight: 900; line-height: 11vmin;}
+.home_sub_title{font-size: 5vmin; font-weight: 900; line-height: 6vmin;}
+.home_description{font-size: 1.2em; font-weight: 800; line-height: 1.4em;}
+.home_button{
+  border: 2px solid black; background-color: white;
+  border-radius: 0; padding: 10px 40px;
+  font-weight: 800; transition: 0.3s;
+  &:hover{background-color: #afb5bf;}
+}
+.back_panel {
+  backdrop-filter: blur(4px); padding: 5vmin; border-radius: 10px;
+  border-top: 1px solid #ffffffbb; border-left: 1px solid #ffffff80;
+  border-right: 1px solid #ffffff80; box-shadow: 3px 10px 10px 0 #00000055;
+}
+
+// ----------------------------------------------------
+// service
+// ----------------------------------------------------
+
+.service_img {
+  position: relative;
+  @include backcover;
+  display: flex; justify-content: flex-start; align-items: flex-end;
+  margin-bottom: 30px;
+  z-index: 0;
+  &::after {
+    content: ""; z-index: -1; position: absolute;
+    width: 100%; height: 100%; backdrop-filter: blur(1px); pointer-events: none; background: #ffffff33;
+  }
+  h1 {font-size: 7vmin; font-weight: 800;}
+}
+.service_desc {
+  font-size: 1.2em; padding: 20px 30px 30px 30px;
+  h2 {font-size: 1.5em; font-weight: 800;}
+}
+.service_desc_faq {padding-left: 2.5em;}
+.service_bar {width: 30px; height: 4px; background-color: $subcolor; margin-left: 30px;}
+
+
+// ----------------------------------------------------
+// mc finder
+// ----------------------------------------------------
+
+// 아나운서 이미지 사이즈 225x300px(450x600px)이하 또는 281x500px(562x1000px)이하
+#mc_finder {
+  border: 2px solid black;
+  border-radius: 0;
+  &:focus, &:active {outline: none; box-shadow: none;}
+  &::placeholder {color: gray;}
+}
+
+// tag search
+#mc_tag_selector {border: 2px solid #{$maincolor};}
+#mc_tag_selector_desc {background-color: $maincolor; color: white;}
+#mc_tag_reset {
+  margin-bottom: 5px; padding: 5px 10px 0 10px;
+  display: flex; justify-content: start; align-items: center; color: white ;
+}
+.mc_tag_reset_btn {
+  border: 1px solid $maincolor-80; background-color: $maincolor-80; cursor: pointer; transition: 0.3s;
+  &:hover {background-color: $maincolor;}
+}
+#mc_tag_list {
+  padding: 0 5px 5px 5px;
+  .active {
+    outline: none; box-shadow: none; color: white !important;
+    background-color: $subcolor !important; border-color: $subcolor !important;
+  }
+}
+.search_check {
+  margin: 5px; color: $subcolor; border-color: $subcolor; border-radius: 0;
+  &:hover {color: $subcolor; background-color: transparent; border-color: $subcolor;}
+}
+.search_btn {display: flex; align-items: center; justify-content: center; border-radius: 0;}
+
+// mc grid and card
+#mc_grid {
+  display: grid; gap: 20px;
+  @media (max-width: 575px) {grid-template-columns: repeat(1, 1fr); justify-content: center;}
+  @media (min-width: 576px) {grid-template-columns: repeat(2, 1fr);}
+  @media (min-width: 768px) {grid-template-columns: repeat(3, 1fr);}
+  @media (min-width: 992px) {grid-template-columns: repeat(3, 1fr);}
+  @media (min-width: 1200px) {grid-template-columns: repeat(3, 1fr);}
+  // bootstrap breakpoint(>=) sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px
+}
+.mc_card {
+  min-width: 200px;  height: 300px;
+  display: flex; justify-content: center; align-items: flex-end; border-radius: 7px; position: relative;
+  z-index: 1; transition: 0.3s; cursor: pointer; overflow: hidden;
+  @include backcover;
+  @media (max-width: 447px) {width: 100%;}
+  &:hover {background-color:rgba(255, 255, 255, 1); transform: translateY(-3px);}
+  &::after {
+    content: ""; z-index: -98; position: absolute; width: 100%; height: 100%;
+    backdrop-filter: blur(3px); pointer-events: none; background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 7px; border: 1px solid #afb5bf;
+  }
+}
+.mc_card_image {
+  background-position: center; background-repeat: no-repeat; z-index: 2;
+  height: 300px; width: auto; max-width: none; padding: 0;
+}
+.mc_card_overlay {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; padding: 1em; z-index: 3; text-align: center;
+  background-color: #ffffffcc; backdrop-filter: blur(3px); border-radius: 0 0 7px 7px; border: 1px solid #afb5bf;
+  &>h6 {color: black; font-weight: 800; margin-bottom: 5px;}
+  &>span {color: #44515c; font-size: 0.8em;}
+}
+#no_mc {
+  min-width: 200px; height: 300px;
+  display: flex; justify-content: center; align-items: center; position: relative; z-index: 1;
+  border-radius: 7px; border: 1px solid #afb5bf; text-align: center;
+}
+
+// ----------------------------------------------------
+// mc profile
+// ----------------------------------------------------
+
+#profile_portrait {
+  position: relative; z-index: 0; height: 550px; overflow: hidden;
+  @include backcover;
+  &::after {
+    content: ""; z-index: -1; position: absolute;
+    width: 100%; height: 100%; backdrop-filter: blur(3px); pointer-events: none;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.5) 55%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+  &>img {
+    -webkit-mask-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 1) 100%);
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 1) 100%);
+    padding: 0; height: 550px; width: auto; max-width: none; z-index: 2;
+  }
+}
+#profile_overlay {
+  width: 100%; position: absolute; top: 470px; left: 50%; transform: translateX(-50%); text-align: center;
+  &>h5 {font-weight: 800;}
+  &>h1 {font-size: 5em; font-weight: 800; line-height: 0.9em;}
+}
+#profile_description {max-width: 300px; font-weight: 800;}
+.profile_buttons {
+  font-weight: 600; transition: 0.3s;
+  &:hover {transform: translateY(-5px);}
+}
+
+.call_btn{
+  max-width: 350px; padding: 15px; margin-top: 2rem; font-weight: 800;
+  display: flex; justify-content: center; align-content: center;
+  background-color: black; border-color: black; border-radius: 0;
+  &:active, &:focus {background-color: black; border-color: black;}
+  &:hover{background-color: $subcolor2; border-color: $subcolor2;}
+}
+#profile_more {margin: 100px 0;}
+.youtube-embed {
+  position: relative;
+  iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+}
+.carousel_thumbnails {width: 100%;}
+.carousel_thumbnail00 {
+  width: 100px; height: 56px;
+  img {object-fit: cover; width: 100px; height: 56px;}
+}
+#profile_career {
+  h5 {font-weight: 800;}
+  ul {border-left: 2px solid black; margin-top: 1rem;}
+  li {margin: 3px 0 3px 6px; list-style-type: minus_list;}
+}
+@counter-style minus_list {symbols: "-"; suffix: " "; system: cyclic;}
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 161.57 26.69"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="annport_logo_simple(212529).svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview28"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="7.7489629"
+     inkscape:cx="71.106289"
+     inkscape:cy="13.292101"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#afb5bf;}</style>
+  </defs>
+  <g
+     id="Layer_2"
+     data-name="Layer 2">
+    <g
+       id="Layer_1-2"
+       data-name="Layer 1">
+      <path
+         class="cls-1"
+         d="M38.58,4.65h3.1l6.89,17.74H45.5l-1.62-4.2h-7.5l-1.62,4.2H31.69ZM37.47,15.4h5.32L40.13,8.48Z"
+         id="path6"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M53.33,4.65,62.2,16.87V4.65h3V22.39H62.51L53.64,10.2V22.39h-3V4.65Z"
+         id="path8"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M71.73,4.65,80.6,16.87V4.65h3.05V22.39H80.91L72,10.2V22.39H69V4.65Z"
+         id="path10"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M88.84,18.69a2,2,0,1,1-2,2A2,2,0,0,1,88.84,18.69Z"
+         id="path12"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M101.49,4.65h6a5.56,5.56,0,0,1,5.88,5.68A5.56,5.56,0,0,1,107.52,16h-3v6.38h-3Zm8.82,5.68c0-1.67-1.09-2.79-3.17-2.79h-2.61v5.58h2.61C109.22,13.12,110.31,12,110.31,10.33Z"
+         id="path14"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M132.76,13.52a9,9,0,1,1-17.94,0,9,9,0,1,1,17.94,0Zm-3.09,0c0-3.42-2.31-6.28-5.88-6.28s-5.88,2.86-5.88,6.28,2.3,6.29,5.88,6.29S129.67,17,129.67,13.52Z"
+         id="path16"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M135.5,4.65h5.83c3.52,0,5.88,2.28,5.88,5.53a5.12,5.12,0,0,1-4,5.32l4.44,6.89h-3.55l-4.21-6.69h-1.39v6.69h-3Zm8.61,5.53c0-1.75-1.21-2.64-3.17-2.64h-2.4v5.27h2.4C142.9,12.81,144.11,11.93,144.11,10.18Z"
+         id="path18"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M153.64,7.54h-4.89V4.65h12.82V7.54h-4.89V22.39h-3Z"
+         id="path20"
+         style="fill:#212529;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M17.6,26.69a1.78,1.78,0,0,1-1.24-3l6.51-6.51.84-.84.41-.41.36-.41a9.05,9.05,0,0,0,1.25-1.92A9.42,9.42,0,0,0,18,0a11.35,11.35,0,0,0-1.17,0H9.1a1.79,1.79,0,0,1,1.6,1.1A1.81,1.81,0,0,1,10.34,3L4.53,8.81,3.05,10.3a9.61,9.61,0,0,0-.7.73c-.22.25-.42.5-.62.77A9.62,9.62,0,0,0,.15,15.56,9.44,9.44,0,0,0,9.32,26.69H17.6Z"
+         id="path22"
+         style="fill:#212529;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load templatetags %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_agency.css' %}"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Agency
+{% endblock %}
+
+{% block navbar %}
+    {% include "agency/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container px-3 pb-5">
+        <div class="mx-0 mb-3 mt-3 pt-5 border-bottom border-dark border-1">
+            <span style="font-size: 1.5em; font-weight: 700;">온라인 문의</span>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <!-- 오류 -->
+            {% if onlineform.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {% for field in onlineform %}
+                        {% if field.errors %}
+                            <strong>{{ field.label }}</strong>
+                            {{ field.errors }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="row g-3 my-0">
+                <div class="aca_form col-lg-6">
+                    <label for="name" class="form-label">성함</label>
+                    <input type="text" name="name" class="form-control" id="name">
+                </div>
+                <div class="aca_form col-lg-6">
+                    <label for="name" class="form-label">기업·단체명</label>
+                    <input type="text" name="corp" class="form-control" id="corp">
+                </div>
+            </div>
+            <div class="row g-3 my-0">
+                <div class="aca_form col-lg-6">
+                    <label for="phoneNumber" class="form-label">연락처</label>
+                    <input type="tel" name="phoneNumber" class="form-control" id="phoneNumber">
+                </div>
+                <div class="aca_form col-lg-6">
+                    <label for="email" class="form-label">이메일</label>
+                    <input type="email" name="email" class="form-control" id="email">
+                </div>
+            </div>
+            <div class="row g-3 my-0">
+                <div class="aca_form col">
+                    <label for="customer_memo" class="form-label">문의내용</label>
+                    <textarea name="customer_memo" class="form-control" id="customer_memo" rows="5"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn ann_button ab_green my-3" id="ann_button" style="margin-top: 10px;">
+                보내기
+            </button>
+        </form>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_academy.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Academy
+{% endblock %}
+
+{% block navbar %}
+    {% include "academy/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container px-3 pb-5">
+        <div class="mx-0 mb-3 pt-5 border-bottom border-dark border-2">
+            <span style="font-size: 1.5em; font-weight: 700;">온라인 상담</span>
+        </div>
+
+        <div class="row g-3 my-0">
+            <div class="justify-content-center align-content-center" style="text-align: center;">
+                작성하신 내용으로 전송되었습니다. 확인 후 아나포트 아카데미 담당자가 연락드리겠습니다.<br>
+                감사합니다 :)
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

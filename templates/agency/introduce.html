@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_agency.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Agency
+{% endblock %}
+
+{% block navbar %}
+    {% include "agency/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div id="introduce_about" style="background-image: url('{% static 'images/agency/agency_introduce01.jpg' %}')">
+            <div id="introduce_about2">
+                <div id="introduce_about3-1">
+                    <h1 style="font-weight: 900;">About ANNPORT</h1>
+                    아나포트는 '아나운서 엔터테인먼트'로, 고품격 아나운서 서비스를 제공합니다.<br>
+                </div>
+                <div id="introduce_about3-2">
+                    <img src="{% static 'images/agency/agency_introduce01-1.png' %}">
+                </div>
+                <div id="introduce_about3-3">
+                    <img src="{% static 'images/annport_big_logo(vertical,black).svg' %}">
+                </div>
+            </div>
+        </div>
+        <div id="introduce_about4" style="font-weight: 700;">
+            아나포트는 2014년 설립한 이래,<br>
+            인정 받는 아나운서 전문 기업으로 발전해 왔습니다.<br>
+            전국적인 네트워크를 통해<br> 다양한 아나운서, 아나테이너를 보유하고 있으며,<br>
+            방송, 행사, 웨딩, 강의, 광고 등<br> 다방면으로 활발한 활동을 하고 있습니다.
+        </div>
+        <div class="row justify-content-center" id="introduce_line">
+            <div class="col-12 col-lg-5 order-2 order-lg-1 py-3 flex-middle">
+                <h2 class="py-3" style="font-weight: 900;">다양한 분야를 소화합니다</h2>
+                아나포트의 아나테이너들이 활동하는 분야는 다양합니다.<br>
+                방송진행은 물론, 공식행사와 라이브커머스 진행, 내레이션, 웨딩, 광고, 강의까지
+                다양한 재능과 커리어를 갖춘 아나포트의 아나테이너들이 전국 각지에서 활약하고 있습니다.
+            </div>
+            <div class="col-xs-9 col-sm-8 col-lg-7 order-1 order-lg-2 py-3">
+                <img class="introduce_line d-md-block d-none"
+                     src="{% static 'images/agency/introduce_line_pc.svg' %}">
+                <img class="introduce_line d-md-none d-block"
+                     src="{% static 'images/agency/introduce_line_mobile.svg' %}">
+            </div>
+        </div>
+        <div id="introduce_portfolio">
+            <div id="introduce_slide">
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/01.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (김호수 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/02.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (김민지 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/03.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (김용남 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/04.jpg' %}">
+                    <div>
+                        <span>홍보 영상 촬영 (박지혜 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/05.jpg' %}">
+                    <div>
+                        <span>라이브커머스 진행 (최시은,이하경 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/06.jpg' %}">
+                    <div>
+                        <span>팬미팅 MC 진행 (박종근 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/07.jpg' %}">
+                    <div>
+                        <span>광고 촬영 (황다솜 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/08.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (김나윤 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/09.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (이다솔 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/10.jpg' %}">
+                    <div>
+                        <span>광고 촬영 (김민지 유수재 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/11.jpg' %}">
+                    <div>
+                        <span>라이브 홈쇼핑 진행 (윤아름 쇼호스트)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/12.jpg' %}">
+                    <div>
+                        <span>팬미팅 MC 진행 (윤도현 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/13.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (김민지 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/14.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (김세영 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/15.jpg' %}">
+                    <div>
+                        <span>공식행사 MC 진행 (박종근 아나운서)</span>
+                    </div>
+                </div>
+                <div class="introduce_slide_page">
+                    <img src="{% static 'images/agency/portfolio/16.jpg' %}">
+                    <div>
+                        <span>교육 영상 촬영 (엄지민 아나운서)</span>
+                    </div>
+                </div>
+            </div>
+            <div id="introduce_portfolio_gradient">
+                <span class="" style="font-weight: 700;">
+                    <img src="{% static '/images/annport_logo_simple(212529).svg' %}" />
+                    포트폴리오
+                </span>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#introduce_slide').slick({
+            dots: false,
+            infinite: true,
+            speed: 1000,
+            fade: false,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            variableWidth: true,
+            slidesToScroll: 1,
+            centerMode: true,
+        });
+    });
+</script>
+{% endblock %}

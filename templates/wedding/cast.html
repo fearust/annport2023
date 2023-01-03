@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_wedding.css' %}"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Wedding
+{% endblock %}
+
+{% block navbar %}
+    {% include "wedding/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="max-width: 800px;">
+        <div class="pt-5"></div>
+        <div>
+            <h4 style="font-weight: 800;">아나포트 웨딩서비스 예약절차 안내</h4>
+        </div>
+        <div>
+            <div class="d-none d-sm-flex justify-content-center mt-3">
+                <img src="{% static 'images/wedding/casting_step.svg' %}">
+            </div>
+            <div class="clearfix p-3 mt-sm-3">
+                <img src="{% static 'images/wedding/step-1.svg' %}" class="float-start me-4 pb-3" style="width: 60px;">
+                <h5 style="font-weight: 800;">섭외 문의</h5>
+                결혼식 사회자 예약에 대해 문의합니다. 본식 일시와 장소를 말씀해주시면 예약 가능 여부 확인이 가능합니다.
+            </div>
+            <div class="clearfix p-3">
+                <img src="{% static 'images/wedding/step-2.svg' %}" class="float-start me-4 pb-3" style="width: 60px;">
+                <h5 style="font-weight: 800;">예약 확정</h5>
+                스케줄 확인 후 예약 희망 여부를 말씀해주시면 예약을 도와드립니다. 예약금 100,000원 입금을 통해 예약이 확정됩니다.
+            </div>
+            <div class="clearfix p-3">
+                <img src="{% static 'images/wedding/step-3.svg' %}" class="float-start me-4 pb-3" style="width: 60px;">
+                <h5 style="font-weight: 800;">사전 미팅</h5>
+                담당 사회자와 식순과 상세 사항에 대해 상의합니다. 미팅은 대면 또는 비대면(전화)으로 이뤄집니다.
+            </div>
+            <div class="clearfix p-3">
+                <img src="{% static 'images/wedding/step-4.svg' %}" class="float-start me-4 pb-3" style="width: 60px;">
+                <h5 style="font-weight: 800;">예식 진행</h5>
+                사회자는 본식 40~60분 전 도착을 원칙으로 합니다.
+            </div>
+            <div class="clearfix p-3">
+                <img src="{% static 'images/wedding/step-5.svg' %}" class="float-start me-4 pb-3" style="width: 60px;">
+                <h5 style="font-weight: 800;">피드백</h5>
+                결혼식을 마친 후 사회자와 연락을 주고 받습니다.
+            </div>
+        </div>
+
+        <div class="pt-5 row">
+            <div class="col pb-3">
+                <h4 style="font-weight: 800;">아나포트 웨딩서비스 섭외 문의</h4>
+                <!--
+                <span><strong>상담 시간 안내</strong></span><br>
+                <span>평일 오전 10시 ~ 오후 6시</span><br>
+                <span>(주말, 공휴일 상담 지연)</span>
+                -->
+            </div>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- 오류 -->
+            {% if castform.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {% for field in castform %}
+                        {% if field.errors %}
+                            <strong>{{ field.label }}</strong>
+                            {{ field.errors }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div id="basicform">
+                <div class="input-group pt-1">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bx-female' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control bride" name="bride" id="bride" placeholder="신부님 성함" value="{{ bride|default_if_none:'' }}">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bxs-phone' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control bride_phone" name="bride_phone" id="bride_phone" placeholder="신부님 연락처" value="{{ bride_phone|default_if_none:'' }}">
+                </div>
+                <div class="input-group pt-1">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bx-male' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control groom" name="groom" id="groom" placeholder="신랑님 성함" value="{{ groom|default_if_none:'' }}">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bxs-phone' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control groom_phone" name="groom_phone" id="groom_phone" placeholder="신랑님 연락처" value="{{ groom_phone|default_if_none:'' }}">
+                </div>
+                <div class="input-group pt-1">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bx-envelope' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control email_addr" name="email_addr" id="email_addr" placeholder="계약서 & 자료 받으실 메일주소" value="{{ email_addr|default_if_none:'' }}">
+                </div>
+                <div class="input-group pt-3 mt-3 border-top">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bx-calendar-heart' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control wedding_date" name="wedding_date" id="wedding_date" placeholder="본식 날짜, 시간" value="{{ wedding_date|default_if_none:'' }}">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bxs-map-pin' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control wedding_place" name="wedding_place" id="wedding_place" placeholder="본식 장소" value="{{ wedding_place|default_if_none:'' }}">
+                </div>
+                <div class="form-check form-switch mt-3">
+                    <input class="form-check-input officiator" type="checkbox" name="officiator" id="officiator" value=1>
+                    <label class="form-check-label" for="officiator">주례가 있다면 체크해주세요.</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input wedding_reception" type="checkbox" name="wedding_reception" id="wedding_reception" value=1>
+                    <label class="form-check-label" for="wedding_reception">2부예식이 진행된다면 체크해주세요.</label>
+                </div>
+                <div class="input-group pt-3 mt-3 border-top">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bx-smile' style="font-size: 1.4em;"></i></span>
+                    <input class="form-control wish_mc" name="wish_mc" id="wish_mc" placeholder="희망 사회자가 있다면 입력해주세요." value="{{ wish_mc|default_if_none:'' }}">
+                </div>
+                <div class="input-group pt-1">
+                    <span class="input-group-text" id="addon-wrapping"><i class='bx bx-help-circle' style="font-size: 1.4em;"></i></span>
+                    <textarea class="form-control customer_memo" name="customer_memo" id="customer_memo" placeholder="그 외 추가적으로 문의하실게 있다면 입력해주세요." value="{{ customer_memo|default_if_none:'' }}"></textarea>
+                </div>
+                <div class="row p-3 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-lg call_btn search_btn mb-5" id="save_btn" style="color: white;">
+                        <i class="bx bxs-save" style="font-size: 1.4em; padding-right: 5px;"></i>
+                        섭외 문의 보내기
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_academy.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Academy
+{% endblock %}
+
+{% block navbar %}
+    {% include "academy/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container px-3 pb-5">
+        <div class="mx-0 mb-3 pt-5 border-bottom border-dark border-2">
+            <span style="font-size: 1.5em; font-weight: 700;">이벤트</span>
+        </div>
+        <table class="table" id="notice_article_title">
+            <tr>
+                <td>{{ event.title }}</td>
+                <td>
+                    {% if event.event_start %}
+                        {{ event.event_start | date:'Y. n. j' }}
+                    {% endif %}
+                    -
+                    {% if event.event_end %}
+                        {{ event.event_end | date:'Y. n. j' }}
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        <div class="border-bottom border-dark border-1 mb-3 pt-4 pb-5 px-2">
+            {{ event.contents | safe }}
+        </div>
+        <a href="{% url 'academy:event' %}" type="button" class="btn ann_button ab_green"
+           style="margin-top: 10px;">
+            목록
+        </a>
+    </div>
+{% endblock %}

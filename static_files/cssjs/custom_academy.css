@@ -1,0 +1,517 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+* {
+  box-sizing: border-box;
+}
+
+a, button, select, input, input[type=text], textarea {
+  font-size: 14px !important;
+}
+
+body {
+  font-size: 14px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none !important;
+}
+a:hover {
+  color: gray;
+  text-decoration: none !important;
+}
+
+#top_spacer {
+  margin-top: 70px;
+}
+
+.ann_nav {
+  margin-top: 0px;
+}
+@media (min-width: 992px) {
+  .ann_nav {
+    height: 70px;
+  }
+}
+
+.ann_logo_wrap {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .ann_logo_wrap {
+    width: 200px;
+    height: 73px;
+  }
+}
+@media (max-width: 991px) {
+  .ann_logo_wrap {
+    margin: 5px 0;
+    width: 120px;
+    height: 50px;
+  }
+}
+
+.ann_logo_wrap > div {
+  position: absolute;
+}
+@media (min-width: 992px) {
+  .ann_logo_wrap > div {
+    top: 43%;
+  }
+}
+@media (max-width: 991px) {
+  .ann_logo_wrap > div {
+    top: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .ann_logo {
+    width: 200px;
+  }
+}
+@media (max-width: 991px) {
+  .ann_logo {
+    width: 120px;
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 220px;
+  color: #44515c;
+  font-size: 0.9em;
+}
+
+#content {
+  min-height: 70%;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.ann_nav {
+  background-color: #E3705C;
+}
+
+#footer {
+  background-color: #fff;
+}
+
+#content {
+  background-color: #eeeeee;
+}
+#content .container {
+  background-color: #eeeeee;
+}
+
+.ann_dropdown-menu {
+  background-color: #E3705C;
+  border-radius: 0 !important;
+}
+
+.ann_dropdown-item:hover {
+  background-color: rgba(238, 209, 191, 0.5019607843);
+}
+.ann_dropdown-item:active {
+  background-color: rgba(238, 209, 191, 0.5019607843);
+}
+.ann_dropdown-item:focus {
+  background-color: rgba(238, 209, 191, 0.5019607843);
+}
+
+ul.navbar-nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+  top: 100%;
+  left: 0;
+  margin-top: -0.125rem !important;
+}
+ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
+  margin-top: -0.125rem !important;
+}
+
+.ann_button {
+  /* border: 2px solid black; */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 40px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.ann_button.ab_pink {
+  background-color: #E3705C;
+}
+.ann_button.ab_pink:hover {
+  background-color: #eed1bf;
+}
+.ann_button.ab_green {
+  background-color: #26A191;
+}
+.ann_button.ab_green:hover {
+  background-color: rgba(38, 161, 145, 0.5019607843);
+}
+
+.ann_home_slide {
+  width: 100%;
+  height: 500px;
+  border: 2px solid #eeeeee;
+  border-top-width: 0;
+  margin: 0 !important;
+}
+
+.ann_home_slide_page {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.ann_home_slide_content {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}
+@media (min-width: 992px) {
+  .ann_home_slide_content {
+    padding: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .ann_home_slide_content {
+    padding: 20px;
+  }
+}
+
+.ann_home_slide_title {
+  font-weight: 700;
+  line-height: 130%;
+  color: white;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .ann_home_slide_title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .ann_home_slide_title {
+    font-size: 32px;
+  }
+}
+
+.ann_home_slide_text {
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.ann_home_banner {
+  height: 150px;
+  border: 2px solid #eeeeee;
+  padding: 0;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.ann_home_banner_content {
+  height: 100%;
+  width: 100%;
+  color: white;
+  line-height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}
+.ann_home_banner_content:hover {
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+@media (min-width: 992px) {
+  .ann_home_banner_content {
+    padding: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .ann_home_banner_content {
+    padding: 20px;
+  }
+}
+
+.slick-dots {
+  bottom: 5px !important;
+}
+.slick-dots button {
+  width: 5px !important;
+  height: 5px !important;
+  border: 1px solid #E3705C !important;
+  border-radius: 50% !important;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.slick-dots button::before {
+  display: none;
+}
+
+.slick-active button {
+  background: #E3705C !important;
+}
+
+#aca_intro_key {
+  height: 250px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+#aca_intro_key_gradient {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(rgba(238, 238, 238, 0), rgb(238, 238, 238));
+  backdrop-filter: blur(1px);
+}
+
+#aca_intro_title {
+  margin-bottom: 50px;
+  font-weight: 900;
+  color: black;
+  line-height: 130%;
+  text-align: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+@media (min-width: 992px) {
+  #aca_intro_title {
+    font-size: 3em;
+  }
+}
+@media (max-width: 991px) {
+  #aca_intro_title {
+    font-size: 2em;
+  }
+}
+
+#aca_intro_text {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+@media (max-width: 991px) {
+  #aca_intro_text {
+    padding: 0 10%;
+  }
+}
+
+#aca_intro_color {
+  background-color: #44515c;
+}
+
+#aca_intro_map {
+  padding: 30px;
+  background-color: #44515c;
+}
+
+#aca_intro_map01 {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#aca_intro_map02 {
+  color: white;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+#aca_intro_map02 div {
+  padding: 20px;
+  background-color: #44515c;
+}
+
+.course_sample_wrap {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#course_intro {
+  padding: 0;
+  min-height: 400px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+#course_gradient {
+  width: 100%;
+  min-height: 400px;
+  background: linear-gradient(rgba(238, 238, 238, 0), rgb(238, 238, 238));
+  backdrop-filter: blur(1px);
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 50px;
+}
+
+#course_activity {
+  padding: 0 0 100px 0;
+}
+
+#course_teacher {
+  background-color: white;
+  padding: 0 0 50px 0;
+}
+
+#course_regular {
+  padding: 0 0 50px 0;
+}
+
+#course_class {
+  background-color: #26A191;
+  color: white;
+  padding: 0 0 50px 0;
+}
+
+#course_custom {
+  background-color: #44515C;
+  color: white;
+  padding: 0 0 50px 0;
+}
+
+#course_regular .card-body,
+#course_class .card-body,
+#course_custom .card-body {
+  height: 200px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  word-break: keep-all;
+}
+
+#course_regular .course_time,
+#course_class .course_time,
+#course_custom .course_time {
+  height: 95px;
+}
+
+.course_regular_card {
+  background: rgb(238, 238, 238);
+  background: linear-gradient(0deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 100%);
+  border: 1px solid #cccccc !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
+}
+
+.course_class_card {
+  background: rgb(38, 161, 145);
+  background: linear-gradient(0deg, rgb(38, 161, 145) 0%, rgb(149, 201, 197) 100%);
+  border: 1px solid #95c9c5 !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
+}
+
+.course_custom_card {
+  background: rgb(68, 81, 92);
+  background: linear-gradient(0deg, rgb(68, 81, 92) 0%, rgb(101, 117, 133) 100%);
+  border: 1px solid #657585 !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
+}
+
+.course_title {
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.course_activity_img {
+  width: 100%;
+  height: 250px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.aca_form {
+  margin-bottom: 10px;
+}
+.aca_form label {
+  font-weight: 700;
+}
+.aca_form input, .aca_form textarea {
+  border: 2px solid black !important;
+  border-radius: 0;
+}
+.aca_form input:focus, .aca_form textarea:focus {
+  box-shadow: 0 0 0 0.25rem rgba(38, 161, 145, 0.5019607843);
+  background-color: rgba(38, 161, 145, 0.5019607843);
+  transition: 0.3s;
+}
+.aca_form input:hover, .aca_form input:active, .aca_form textarea:hover, .aca_form textarea:active {
+  background-color: rgba(38, 161, 145, 0.5019607843);
+  transition: 0.3s;
+}
+
+#notice_table {
+  font-size: 1em;
+}
+#notice_table thead :nth-child(2), #notice_table tbody tr :nth-child(2) {
+  text-align: right;
+  padding-right: 20px;
+}
+#notice_table thead :nth-child(1), #notice_table tbody tr :nth-child(1) {
+  padding-left: 20px;
+}
+
+#notice_article_title {
+  font-size: 1em;
+  font-weight: 700 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-color: black;
+}
+#notice_article_title tr :nth-child(2) {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.aca_event_banner {
+  padding: 20px;
+  background-clip: padding-box;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.aca_event_banner_image {
+  /* background-color: #E3705C; */
+  /* 3:2 사이즈 66.6%. 4:3 이미지는 75%로 설정 */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.aca_event_banner_image_content {
+  width: 100%;
+  height: 100%;
+}
+.aca_event_banner_image_content:hover {
+  transition: 0.3s;
+  backdrop-filter: blur(2px) !important;
+}
+
+.aca_event_banner_title {
+  margin: 10px 0 0 0;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=custom_academy.css.map */

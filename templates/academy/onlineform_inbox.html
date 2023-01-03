@@ -1,0 +1,7 @@
+<strong>{{ of.name }}</strong>
+<a href="tel:{{ of.phone.Number }}">{{ of.phoneNumber }}</a>
+<a href="mailto:{{ of.email }}">{{ of.email }}</a>
+{{ of.create_date | date:'Y/m/d P'}}
+-------------------------
+[문의내용]
+{{ of.customer_memo }}

@@ -1,0 +1,262 @@
+@import "custom_common";
+
+// ----------------------------------------------------
+// theme color
+// ----------------------------------------------------
+
+$maincolor: #E3705C;
+$maincolor-80: #E3705C80;
+$maincolor-sub: #eed1bf;
+$maincolor-sub80: #eed1bf80;
+$subcolor: #26A191;
+$subcolor-80: #26A19180;
+$bg-default: #eeeeee;
+
+// ----------------------------------------------------
+// nav-bar and button
+// ----------------------------------------------------
+
+.ann_nav{@include bgcolor($maincolor)}
+#footer{@include bgcolor(#fff)}
+#content{
+  @include bgcolor($bg-default);
+  .container {@include bgcolor($bg-default)}
+}
+.ann_dropdown-menu {
+  background-color: $maincolor;
+  border-radius: 0 !important;
+}
+.ann_dropdown-item {
+  &:hover {background-color: $maincolor-sub80;}
+  &:active {background-color: $maincolor-sub80;}
+  &:focus {background-color: $maincolor-sub80;}
+}
+ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
+  display:block;
+  top: 100%;
+  left: 0;
+  margin-top: -.125rem !important;
+  &[data-bs-popper]{margin-top: -.125rem !important;}
+}
+.ann_button{
+  /* border: 2px solid black; */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 40px;
+  font-weight: 700;
+  transition: 0.3s;
+  &.ab_pink{
+    background-color: $maincolor;
+    &:hover{background-color: $maincolor-sub;}
+  }
+  &.ab_green{
+    background-color: $subcolor;
+    &:hover{background-color: $subcolor-80;}
+  }
+}
+
+// ----------------------------------------------------
+// HOME
+// ----------------------------------------------------
+
+.ann_home_slide {
+  width: 100%; height: 500px;
+  border: 2px solid #eeeeee; border-top-width: 0;
+  margin: 0 !important;
+}
+.ann_home_slide_page {
+  @include backcover;
+}
+.ann_home_slide_content {
+  width: 100%; height: 100%;
+  @include flexColCenStart;
+  @media (min-width: 992px) {padding: 50px;}
+  @media (max-width: 991px) {padding: 20px;}
+}
+.ann_home_slide_title {
+  font-weight: 700; line-height: 130%;
+  color: white; text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  @media (min-width: 992px) {font-size: 60px;}
+  @media (max-width: 991px) {font-size: 32px;}
+}
+.ann_home_slide_text {
+  font-weight: 300; line-height: 160%;
+}
+.ann_home_banner {
+  height: 150px; border: 2px solid #{$bg-default};
+  padding: 0;
+  @include backcover;
+}
+.ann_home_banner_content {
+  height: 100%; width: 100%;
+  color: white;   line-height: 100%;
+  &:hover{backdrop-filter: blur(4px); transition: 0.3s;}
+  @include flexColCenStart;
+  @media (min-width: 992px) {padding: 50px;}
+  @media (max-width: 991px) {padding: 20px;}
+}
+.slick-dots {
+  bottom: 5px !important;
+  button{
+    width: 5px !important; height: 5px !important;
+    border: 1px solid #{$maincolor} !important; border-radius: 50% !important;
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.6);
+    &::before{display: none;}
+  }
+}
+.slick-active {
+  button {background: $maincolor !important;}
+}
+
+
+// ----------------------------------------------------
+// introduce
+// ----------------------------------------------------
+
+#aca_intro_key {
+  height: 250px;
+  @include backcover;
+}
+#aca_intro_key_gradient {
+  width: 100%; height: 250px;
+  background: linear-gradient(rgba(238,238,238,0), rgba(238,238,238,1));
+  backdrop-filter: blur(1px);
+}
+#aca_intro_title {
+  margin-bottom: 50px;
+  font-weight: 900;
+  color: black;
+  line-height: 130%;
+  text-align: center;
+  @include flexColCenCen;
+  @media (min-width: 992px) {font-size: 3em;}
+  @media (max-width: 991px) {font-size: 2em;}
+}
+#aca_intro_text {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 500;
+  @media (max-width: 991px) {padding: 0 10%;}
+}
+#aca_intro_color {background-color: #44515c;}
+#aca_intro_map {padding: 30px; background-color: #44515c;}
+#aca_intro_map01 {@include flexColCenCen;}
+#aca_intro_map02 {
+  color: white;
+  @include flexColCenCen;
+  div {padding: 20px; background-color: #44515c;}
+}
+
+// ----------------------------------------------------
+// course
+// ----------------------------------------------------
+.course_sample_wrap{margin: 0; padding: 0; text-align: center; width: 100%;}
+#course_intro{padding: 0; min-height: 400px; @include backcover;}
+#course_gradient {
+  width: 100%; min-height: 400px;
+  background: linear-gradient(rgba(238,238,238,0), rgba(238,238,238,1));
+  backdrop-filter: blur(1px);
+  @include flexColCenCen;
+  padding: 0 50px;
+}
+#course_activity {padding: 0 0 100px 0;}
+#course_teacher {background-color: white; padding: 0 0 50px 0;}
+#course_regular {padding: 0 0 50px 0;}
+#course_class {background-color: $subcolor; color: white; padding: 0 0 50px 0;}
+#course_custom {background-color: #44515C; color: white; padding: 0 0 50px 0;}
+#course_regular .card-body,
+#course_class .card-body,
+#course_custom .card-body{height: 200px; @include flexColCenCen; word-break: keep-all;}
+#course_regular .course_time,
+#course_class .course_time,
+#course_custom .course_time {height: 95px;}
+.course_regular_card{
+  background: rgb(238,238,238);
+  background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%);
+  border: 1px solid #cccccc !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
+}
+.course_class_card {
+  background: rgb(38,161,145);
+  background: linear-gradient(0deg, rgba(38,161,145,1) 0%, rgba(149,201,197,1) 100%);
+  border: 1px solid #95c9c5 !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
+}
+.course_custom_card {
+  background: rgb(68,81,92);
+  background: linear-gradient(0deg, rgba(68,81,92,1) 0%, rgba(101,117,133,1) 100%);
+  border: 1px solid #657585 !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
+}
+.course_title {font-size: 4em; font-weight: 700; text-align: center;}
+.course_activity_img {width: 100%; height: 250px; @include backcover;}
+
+// ----------------------------------------------------
+// online form
+// ----------------------------------------------------
+
+.aca_form {
+  margin-bottom: 10px;
+  label {font-weight: 700;}
+  input, textarea {
+    border: 2px solid black !important;
+    border-radius: 0;
+  }
+  input:focus, textarea:focus {
+    box-shadow: 0 0 0 0.25rem #26A19180;
+    background-color: #26A19180;
+    transition: 0.3s;
+  }
+  input:hover, input:active, textarea:hover, textarea:active {
+    background-color: #26A19180;
+    transition: 0.3s;
+  }
+}
+
+// ----------------------------------------------------
+// notice
+// ----------------------------------------------------
+
+#notice_table {
+  font-size: 1em;
+  thead :nth-child(2), tbody tr :nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+  }
+  thead :nth-child(1), tbody tr :nth-child(1) {
+    padding-left: 20px;
+  }
+}
+#notice_article_title {
+  font-size: 1em;
+  font-weight: 700 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-color: black;
+  tr :nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+  }
+}
+
+// ----------------------------------------------------
+// event
+// ----------------------------------------------------
+
+.aca_event_banner {
+  padding: 20px;
+  background-clip: padding-box;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.aca_event_banner_image {
+  /* background-color: #E3705C; */
+  /* 3:2 사이즈 66.6%. 4:3 이미지는 75%로 설정 */
+  @include backcover;
+}
+.aca_event_banner_image_content {
+  width: 100%; height: 100%;
+  &:hover{transition: 0.3s; backdrop-filter: blur(2px) !important;}
+}
+.aca_event_banner_title { margin: 10px 0 0 0; font-size: 1.2em; font-weight: 700;}
+
