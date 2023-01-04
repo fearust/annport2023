@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssjs/custom_agency.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    ANNPORT Agency
+{% endblock %}
+
+{% block navbar %}
+    {% include "agency/navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row gx-3 gy-2">
+            <div class="col-12 mx-3" id="eventdiv1">
+                <h1>아나포트 행사 대행</h1>
+                아나포트에서 전반적인 행사 관리, 진행을 대행합니다.
+            </div>
+            <div class="col-12 mx-3 eventdivtitle">
+                <h4>행사유형</h4>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="eventdiv_category" style="background-image: url('{% static 'images/agency/eventC01.jpg' %}')">
+                    <div class="eventdiv_category_gradient">
+                        <h5>라이브커머스</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_category_desc">
+                    행사유형에 대한 설명이 들어갑니다.
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col- col-lg-3">
+                <div class="eventdiv_category" style="background-image: url('{% static 'images/agency/eventC02.jpg' %}')">
+                    <div class="eventdiv_category_gradient">
+                        <h5>기업기관행사</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_category_desc">
+                    행사유형에 대한 설명이 들어갑니다. 이 부분은 기업기관행사 관련한 설명이고, 이런식으로 들어가게 됩니다.
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="eventdiv_category" style="background-image: url('{% static 'images/agency/eventC03.jpg' %}')">
+                    <div class="eventdiv_category_gradient">
+                        <h5>학교가족행사</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_category_desc">
+                    행사유형에 대한 설명이 들어갑니다.
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="eventdiv_category" style="background-image: url('{% static 'images/agency/eventC04.jpg' %}')">
+                    <div class="eventdiv_category_gradient">
+                        <h5>축제콘서트</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_category_desc">
+                    행사유형에 대한 설명이 들어갑니다.
+                </div>
+            </div>
+            <div class="col-12 mx-3 mt-5 eventdivtitle">
+                <h4>서비스종류</h4>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="eventdiv_service">
+                    <img class="eventdiv_service_img" src="{% static 'images/agency/eventS01.svg' %}">
+                    <div class="eventdiv_service_gradient">
+                        <h5>행사기획</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_service_desc">
+                    행사유형에 대한 설명이 들어갑니다.
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="eventdiv_service">
+                    <img class="eventdiv_service_img" src="{% static 'images/agency/eventS02.svg' %}">
+                    <div class="eventdiv_service_gradient">
+                        <h5>장비대여</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_service_desc">
+                    행사유형에 대한 설명이 들어갑니다. 이 부분은 기업기관행사 관련한 설명이고, 이런식으로 들어가게 됩니다.
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="eventdiv_service">
+                    <img class="eventdiv_service_img" src="{% static 'images/agency/eventS03.svg' %}">
+                    <div class="eventdiv_service_gradient">
+                        <h5>아티스트</h5>
+                    </div>
+                </div>
+                <div class="eventdiv_service_desc">
+                    행사유형에 대한 설명이 들어갑니다.
+                </div>
+            </div>
+            <div class="col-12 my-5 px-3 py-2 border-top border-dark" style="font-size: 0.8em;">
+                *자세한 사항은 온라인 문의로 문의주시면 빠르게 답변드리겠습니다.
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

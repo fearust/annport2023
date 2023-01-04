@@ -11,6 +11,7 @@ a, button, select, input, input[type=text], textarea {
 body {
   font-size: 14px;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,6 +21,11 @@ a {
 a:hover {
   color: gray;
   text-decoration: none !important;
+}
+
+span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 #top_spacer {
@@ -86,6 +92,7 @@ a:hover {
 
 #content {
   min-height: 70%;
+  overflow-x: hidden !important;
 }
 
 @media (min-width: 992px) {

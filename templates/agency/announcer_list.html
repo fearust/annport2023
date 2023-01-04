@@ -16,7 +16,13 @@
 
 {% block content %}
     <!-- 진행자 열람창 -->
-    <div class="container my-5 pt-0">
+    <div class="container mb-5 pt-0">
+        <div class="row gx-3 gy-2 mx-3">
+            <div class="col-12" id="annfinderdiv1">
+                <h1>아나운서 프로필</h1>
+                여러분께 필요한 아나운서를 가장 빠르고 편하게 찾아보세요.
+            </div>
+        </div>
         <div class="px-2 d-inline">
             {% if mc_search_name or mc_search_tag or mc_search_tag2 %}
                 <a href="{% url "agency:mc_list" %}">

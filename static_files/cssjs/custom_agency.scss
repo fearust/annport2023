@@ -68,7 +68,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
 // ----------------------------------------------------
 
 .ann_home_slide {
-  width: 100%; height: 500px; margin: 10px 0px !important; border: 0;
+  width: 100%; height: 500px; margin: 10px 0 !important; border: 0;
   .slick-list {
     top: 150px;
   }
@@ -158,7 +158,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
 #introduce_about {
   width: auto; max-width: 100%; height: 400px; margin: 100px 0 50px 0;
   border: 1px solid black; border-radius: $border-global;
-  position: relative; overflow: visible;
+  position: relative; overflow: visible; z-index: 10;
   @include backcover;
    @media (max-width: 991px) {margin-top: 30px;}
   #introduce_about2 {
@@ -199,12 +199,37 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
   }
 }
 #introduce_about4 {
-  text-align: center; font-size: 1.4em; font-weight: 500;
+  text-align: center; font-size: 1.4em; z-index: 5;
+  position: relative;
+  #introduce_about4-1 {
+    padding: 20px 28%; margin-top: 100px; margin-bottom: 100px;
+    @media (max-width: 991px) {padding: 20px;}
+    h2 {font-weight: 900;}
+    span {font-weight: 500;}
+    //span{padding: 5px 10px; background-color: #000000ff; color: $bg-default;}
+  }
+  #introduce_about4-2 {
+    @include backcover;
+    width: 140%; height: 700px; z-index: -10; position: absolute;
+    top: -20%; left: 50%; transform: translateX(-50%);
+    &::after {
+      content: ""; z-index: -9; position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 100%; height: 100%; pointer-events: none;
+      background: linear-gradient(
+        0deg,
+        rgba(221, 221, 221, 1) 0%,
+        rgba(221, 221, 221, 0.5) 10%,
+        rgba(221, 221, 221, 0.5) 90%,
+        rgba(221, 221, 221, 1) 100%
+      );
+    }
+  }
 }
 #introduce_line {
-  width: auto; max-width: 100%; margin: 50px 0 20px 0; padding: 30px 0;
+  width: auto; max-width: 100%; margin: 50px 0 20px 0; padding: 30px 0; z-index: 5;
   border: 2px dashed black; border-radius: $border-global;
-  background-color: #ffffff55;
+  background-color: #ffffffcc; position: relative;
 }
 .introduce_line {
   width: auto; max-width: 100%; padding: 0 50px 0 25px;
@@ -218,7 +243,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
   @media (max-width: 991px) {align-items: center;}
 }
 #introduce_portfolio {
-  width: auto; max-width: 100%; height: 300px; margin: 20px 0 20px 0;
+  width: auto; max-width: 100%; height: 300px; margin: 20px 0 20px 0; z-index: 5;
   border: 1px solid black; border-radius: $border-global;
   position: relative; overflow: hidden;
   background-color: $agency-purple;
@@ -233,7 +258,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
   img {height: 200px; border-radius: $border-global}
   div {
     position: absolute; width: 100%; text-align: center;
-    bottom: 0px; left: 50%; transform: translateX(-50%) translateY(50%);
+    bottom: 0; left: 50%; transform: translateX(-50%) translateY(50%);
     span {
       padding: 3px 15px; color: white; background-color: black;
       border-radius: 10px; font-size: 0.8em;
@@ -265,6 +290,11 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
 // ----------------------------------------------------
 // announcer finder
 // ----------------------------------------------------
+
+#annfinderdiv1 {
+  margin: 50px 0 0 0; padding: 20px 0;
+  h1 {font-weight: 900}
+}
 
 // 아나운서 이미지 사이즈 225x300px(450x600px)이하 또는 281x500px(562x1000px)이하
 #mc_finder {
@@ -414,8 +444,9 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
   width: 80px; position: absolute; right: 10px; top: 10px; z-index: -90;
 }
 #detail_upper_download{
+  visibility: hidden;
   padding: 5px 10px; background-color: $maincolor; border-radius: $border-global;
-  width: 110px; position: absolute; right: 0px; top: -40px; z-index: -80;
+  width: 110px; position: absolute; right: 0; top: -40px; z-index: -80;
   text-align: right; display: flex; justify-content: flex-end; align-items: center;
   font-size: 0.8em; font-weight: 700; line-height: 85%;
   &:hover{
@@ -501,6 +532,11 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
 // online form
 // ----------------------------------------------------
 
+#formdiv1 {
+  margin: 50px 0 10px 0; padding: 20px 0;
+  h1 {font-weight: 900}
+  @media (max-width: 991px) {}
+}
 .aca_form {
   margin-bottom: 10px;
   label {font-weight: 700;}
@@ -517,4 +553,70 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
     background-color: $maincolor-sub;
     transition: 0.3s;
   }
+}
+
+// ----------------------------------------------------
+// event
+// ----------------------------------------------------
+
+#eventdiv1 {
+  margin: 50px 0 40px 0; padding: 20px 0;
+  h1 {font-weight: 900}
+  @media (max-width: 991px) {}
+}
+.eventdivtitle {
+  margin: 0; padding: 0;
+  h4 {font-weight: 900}
+  @media (max-width: 991px) {}
+}
+.eventdiv_category {
+  border: 1px solid black; border-radius: $border-global; height: 300px;
+  margin: 0; padding: 20px 20px; text-align: center; position: relative;
+  @include backcover;
+  h5 {
+    font-weight: 700;
+    text-shadow:
+        1px 1px 0 #{$agency-purple}, 2px 2px 0 #{$agency-purple}, 3px 3px 0 #{$agency-purple},
+        0px 1px 0 #{$agency-purple}, -1px 1px 0 #{$agency-purple}, -1px 0px 0 #{$agency-purple},
+        -1px -1px 0 #{$agency-purple}, 0px -1px 0 #{$agency-purple}, 1px -1px 0 #{$agency-purple},
+        1px 0px 0 #{$agency-purple};
+  }
+  .eventdiv_category_gradient {
+    width: 100%; padding-top: 20px;
+    border-bottom-right-radius: $border-global;
+    border-bottom-left-radius: $border-global;
+    position: absolute; bottom: 0; left: 0;
+    background: linear-gradient(0deg, #c4c6dbff, #c4c6dbbb 50%, #c4c6db00);
+  }
+  @media (max-width: 991px) {}
+}
+.eventdiv_category_desc {
+  margin: 10px;
+}
+.eventdiv_service {
+  background-color: $maincolor-sub80; border-radius: $border-global; height: 230px;
+  margin: 0; padding: 20px 20px 60px 20px; text-align: center; position: relative;
+  @include backcover;
+  h5 {
+    font-weight: 700;
+    text-shadow:
+        1px 1px 0 white, 2px 2px 0 white, 3px 3px 0 white,
+        0px 1px 0 white, -1px 1px 0 white, -1px 0px 0 white,
+        -1px -1px 0 white, 0px -1px 0 white, 1px -1px 0 white,
+        1px 0px 0 white;
+  }
+  .eventdiv_service_img{
+    height: 150px;
+  }
+  .eventdiv_service_gradient {
+    width: 100%; padding-top: 20px;
+    border-bottom-right-radius: $border-global;
+    border-bottom-left-radius: $border-global;
+    position: absolute; bottom: 0; left: 0;
+    background: linear-gradient(0deg, #ffecb2ff, #ffecb2bb 50%, #ffecb200);
+  }
+  @media (max-width: 991px) {}
+}
+.eventdiv_service_desc {
+  margin: 10px;
 }

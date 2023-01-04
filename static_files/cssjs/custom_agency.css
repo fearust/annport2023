@@ -10,6 +10,7 @@ a, button, select, input, input[type=text], textarea {
 body {
   font-size: 14px;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -19,6 +20,11 @@ a {
 a:hover {
   color: gray;
   text-decoration: none !important;
+}
+
+span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 #top_spacer {
@@ -85,6 +91,7 @@ a:hover {
 
 #content {
   min-height: 70%;
+  overflow-x: hidden !important;
 }
 
 @media (min-width: 992px) {
@@ -166,7 +173,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
 .ann_home_slide {
   width: 100%;
   height: 500px;
-  margin: 10px 0px !important;
+  margin: 10px 0 !important;
   border: 0;
 }
 .ann_home_slide .slick-list {
@@ -341,6 +348,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
   border-radius: 10px;
   position: relative;
   overflow: visible;
+  z-index: 10;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -425,7 +433,48 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
 #introduce_about4 {
   text-align: center;
   font-size: 1.4em;
+  z-index: 5;
+  position: relative;
+}
+#introduce_about4 #introduce_about4-1 {
+  padding: 20px 28%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media (max-width: 991px) {
+  #introduce_about4 #introduce_about4-1 {
+    padding: 20px;
+  }
+}
+#introduce_about4 #introduce_about4-1 h2 {
+  font-weight: 900;
+}
+#introduce_about4 #introduce_about4-1 span {
   font-weight: 500;
+}
+#introduce_about4 #introduce_about4-2 {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  width: 140%;
+  height: 700px;
+  z-index: -10;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#introduce_about4 #introduce_about4-2::after {
+  content: "";
+  z-index: -9;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgb(221, 221, 221) 0%, rgba(221, 221, 221, 0.5) 10%, rgba(221, 221, 221, 0.5) 90%, rgb(221, 221, 221) 100%);
 }
 
 #introduce_line {
@@ -433,9 +482,11 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
   max-width: 100%;
   margin: 50px 0 20px 0;
   padding: 30px 0;
+  z-index: 5;
   border: 2px dashed black;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3333333333);
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
 }
 
 .introduce_line {
@@ -462,6 +513,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
   max-width: 100%;
   height: 300px;
   margin: 20px 0 20px 0;
+  z-index: 5;
   border: 1px solid black;
   border-radius: 10px;
   position: relative;
@@ -489,7 +541,7 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(50%);
 }
@@ -528,6 +580,14 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
   #introduce_portfolio_gradient {
     background: none;
   }
+}
+
+#annfinderdiv1 {
+  margin: 50px 0 0 0;
+  padding: 20px 0;
+}
+#annfinderdiv1 h1 {
+  font-weight: 900;
 }
 
 #mc_finder {
@@ -849,12 +909,13 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
 }
 
 #detail_upper_download {
+  visibility: hidden;
   padding: 5px 10px;
   background-color: #f8f8f8;
   border-radius: 10px;
   width: 110px;
   position: absolute;
-  right: 0px;
+  right: 0;
   top: -40px;
   z-index: -80;
   text-align: right;
@@ -1030,6 +1091,13 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
   suffix: " ";
   system: cyclic;
 }
+#formdiv1 {
+  margin: 50px 0 10px 0;
+  padding: 20px 0;
+}
+#formdiv1 h1 {
+  font-weight: 900;
+}
 .aca_form {
   margin-bottom: 10px;
 }
@@ -1048,6 +1116,83 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
 .aca_form input:hover, .aca_form input:active, .aca_form textarea:hover, .aca_form textarea:active {
   background-color: #ffecb2;
   transition: 0.3s;
+}
+
+#eventdiv1 {
+  margin: 50px 0 40px 0;
+  padding: 20px 0;
+}
+#eventdiv1 h1 {
+  font-weight: 900;
+}
+.eventdivtitle {
+  margin: 0;
+  padding: 0;
+}
+.eventdivtitle h4 {
+  font-weight: 900;
+}
+.eventdiv_category {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 300px;
+  margin: 0;
+  padding: 20px 20px;
+  text-align: center;
+  position: relative;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.eventdiv_category h5 {
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #c4c6db, 2px 2px 0 #c4c6db, 3px 3px 0 #c4c6db, 0px 1px 0 #c4c6db, -1px 1px 0 #c4c6db, -1px 0px 0 #c4c6db, -1px -1px 0 #c4c6db, 0px -1px 0 #c4c6db, 1px -1px 0 #c4c6db, 1px 0px 0 #c4c6db;
+}
+.eventdiv_category .eventdiv_category_gradient {
+  width: 100%;
+  padding-top: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #c4c6db, rgba(196, 198, 219, 0.7333333333) 50%, rgba(196, 198, 219, 0));
+}
+.eventdiv_category_desc {
+  margin: 10px;
+}
+
+.eventdiv_service {
+  background-color: #f6edcf;
+  border-radius: 10px;
+  height: 230px;
+  margin: 0;
+  padding: 20px 20px 60px 20px;
+  text-align: center;
+  position: relative;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.eventdiv_service h5 {
+  font-weight: 700;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 white, 3px 3px 0 white, 0px 1px 0 white, -1px 1px 0 white, -1px 0px 0 white, -1px -1px 0 white, 0px -1px 0 white, 1px -1px 0 white, 1px 0px 0 white;
+}
+.eventdiv_service .eventdiv_service_img {
+  height: 150px;
+}
+.eventdiv_service .eventdiv_service_gradient {
+  width: 100%;
+  padding-top: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #ffecb2, rgba(255, 236, 178, 0.7333333333) 50%, rgba(255, 236, 178, 0));
+}
+.eventdiv_service_desc {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=custom_agency.css.map */

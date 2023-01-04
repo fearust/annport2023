@@ -72,3 +72,7 @@ def onlineform(request):
 
 def onlineform_success(request):
     return render(request, 'agency/onlineform_success.html')
+
+
+def event(request):
+    return render(request, 'agency/event.html')
