@@ -101,6 +101,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # other package setting
 TAGGIT_CASE_INSENSITIVE = True
+
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = 'ckeditor_uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'

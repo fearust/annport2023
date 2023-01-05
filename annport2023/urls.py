@@ -15,5 +15,5 @@ urlpatterns = [
     path('academy/', include('academy.urls')),
     path('agency/', include('agency.urls')),
     path('', views.index, name='index'),
-    path('ckeditor/', include('ckeditor_uploader.urls'))
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
