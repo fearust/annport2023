@@ -575,11 +575,11 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
   @include backcover;
   h5 {
     font-weight: 700;
-    text-shadow:
-        1px 1px 0 #{$agency-purple}, 2px 2px 0 #{$agency-purple}, 3px 3px 0 #{$agency-purple},
-        0px 1px 0 #{$agency-purple}, -1px 1px 0 #{$agency-purple}, -1px 0px 0 #{$agency-purple},
-        -1px -1px 0 #{$agency-purple}, 0px -1px 0 #{$agency-purple}, 1px -1px 0 #{$agency-purple},
-        1px 0px 0 #{$agency-purple};
+    //text-shadow:
+    //    1px 1px 0 #{$agency-purple}, 2px 2px 0 #{$agency-purple}, 3px 3px 0 #{$agency-purple},
+    //    0px 1px 0 #{$agency-purple}, -1px 1px 0 #{$agency-purple}, -1px 0px 0 #{$agency-purple},
+    //    -1px -1px 0 #{$agency-purple}, 0px -1px 0 #{$agency-purple}, 1px -1px 0 #{$agency-purple},
+    //    1px 0px 0 #{$agency-purple};
   }
   .eventdiv_category_gradient {
     width: 100%; padding-top: 20px;
@@ -599,11 +599,11 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu{
   @include backcover;
   h5 {
     font-weight: 700;
-    text-shadow:
-        1px 1px 0 white, 2px 2px 0 white, 3px 3px 0 white,
-        0px 1px 0 white, -1px 1px 0 white, -1px 0px 0 white,
-        -1px -1px 0 white, 0px -1px 0 white, 1px -1px 0 white,
-        1px 0px 0 white;
+    //text-shadow:
+    //    1px 1px 0 white, 2px 2px 0 white, 3px 3px 0 white,
+    //    0px 1px 0 white, -1px 1px 0 white, -1px 0px 0 white,
+    //    -1px -1px 0 white, 0px -1px 0 white, 1px -1px 0 white,
+    //    1px 0px 0 white;
   }
   .eventdiv_service_img{
     height: 150px;

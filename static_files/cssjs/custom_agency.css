@@ -1146,7 +1146,6 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
 }
 .eventdiv_category h5 {
   font-weight: 700;
-  text-shadow: 1px 1px 0 #c4c6db, 2px 2px 0 #c4c6db, 3px 3px 0 #c4c6db, 0px 1px 0 #c4c6db, -1px 1px 0 #c4c6db, -1px 0px 0 #c4c6db, -1px -1px 0 #c4c6db, 0px -1px 0 #c4c6db, 1px -1px 0 #c4c6db, 1px 0px 0 #c4c6db;
 }
 .eventdiv_category .eventdiv_category_gradient {
   width: 100%;
@@ -1176,7 +1175,6 @@ ul.navbar-nav li.dropdown:hover > ul.dropdown-menu[data-bs-popper] {
 }
 .eventdiv_service h5 {
   font-weight: 700;
-  text-shadow: 1px 1px 0 white, 2px 2px 0 white, 3px 3px 0 white, 0px 1px 0 white, -1px 1px 0 white, -1px 0px 0 white, -1px -1px 0 white, 0px -1px 0 white, 1px -1px 0 white, 1px 0px 0 white;
 }
 .eventdiv_service .eventdiv_service_img {
   height: 150px;
